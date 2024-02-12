@@ -65,3 +65,11 @@ function theme_gsap_script(){
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
 
 // GSAP
+
+/* Allow WebP*/
+function wpdocs_add_webp( $wp_get_mime_types ) {
+	$wp_get_mime_types['webp'] = 'image/webp';
+	return $wp_get_mime_types;
+}
+
+add_filter( 'mime_types', 'wpdocs_add_webp' );

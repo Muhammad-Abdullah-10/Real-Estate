@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container-fluid px-5 py-1">
     <div class="row">
-        <div class="col-xl-6 col-md-6 col-sm-12 banner-content d-flex flex-column justify-content-start align-items-start p-5">
+        <div class="col-xl-6 col-md-6 col-sm-12 banner-content d-flex flex-column justify-content-start align-items-start p-5 home-banner-right">
             <div class="contain-h1">
                 <h1 class="banner-main-heading">Primo Real <span>Estate
                     </span>
@@ -41,6 +41,8 @@
             </div>
             <div class="agent-img-banner-sec">
                 <div class="row">
+                        <?php echo get_field('agent_name'); ?>
+                        <?php echo  get_field('agent_image'); ?>
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
@@ -53,4 +55,5 @@
         <div class="col-xl-6 col-md-6 col-sm-12 background-banner-home"></div>
     </div>
 </div>
+
 <?php get_footer(); ?>

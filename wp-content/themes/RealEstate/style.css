@@ -105,7 +105,9 @@ ul#menu-main-menu li a{
 .contain-h1{
     max-width: 350px;
 }
-
+.home-banner-right{
+    background-color: #f4fafe;
+}
 .banner-main-heading{
     font-size: 42px;
     /* font-family: 'Francy'; */
@@ -196,7 +198,8 @@ ul#menu-main-menu li a{
 }
 .agent-img{
     /* background-color: red; */
-    border: #b9933f 1px solid;
+    /* border: #b9933f 2px solid; */
+    border: #fff 2px solid;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -218,7 +221,17 @@ ul#menu-main-menu li a{
     font-family: 'Poppins Light';
     font-weight: 400;
     font-size: 18px;
+    
 }
 .listing-link-banner {
     color: #b9933f;
 }
+
+/* @keyframes spinner {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360;
+    }
+} */
