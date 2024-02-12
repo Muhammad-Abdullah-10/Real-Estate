@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* font-family */
+@font-face {
+    font-family: 'Nakheel-bold';
+    src: url(../RealEstate/inc/fonts/Nakheel-TextBold.woff);
+  }
+@font-face {
+    font-family: 'Francy';
+    src: url(../RealEstate/inc/fonts/Francy.woff);
+  }
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(../RealEstate/inc/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: 'Poppins Light';
+    src: url(../RealEstate/inc/fonts/Poppins-Light.ttf);
+}
+/* font-family */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Nakheel-bold';
+}
+.navbar-brand{
+    width: 20vw;
+}
+#main-header-menu{
+    min-width: 60vw;
+    display: flex;
+    flex-direction: row;    
+    list-style-type: none;
+    list-style: none ;
+    justify-content: space-around;
+}
+ul#menu-main-menu{
+    list-style-type: none ;
+}
+ul#menu-main-menu li a{
+    font-family:'Poppins Light' ;
+    color:#e5892a ;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+}
+.button-listing{
+    padding:10px 35px;
+    background: #b9933f;
+    border:solid 1px #b9933f;
+    font-family: 'Poppins';
+}
+.button-listing:hover{
+    background-color: transparent;
+    border: 1px solid #b9933f;
+    color: #333;
+}
+
+.contain-h1{
+    max-width: 350px;
+}
+
+.banner-main-heading{
+    font-size: 42px;
+    /* font-family: 'Francy'; */
+    font-style: italic;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+.banner-main-heading span{
+    font-size: 32px;
+    /* font-family: 'Francy'; */
+    font-style: italic;
+    text-transform: uppercase;
+}
+.banner-sub-heading{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 200 !important;
+    /* font-family: 'Nakheel-bold'; */
+    font-family: 'Poppins Medium';
+    text-transform: capitalize;
+    padding-bottom: 40px;
+}
+
+.golden-color{
+    color:#b9933f;
+}
+.background-banner-home{
+    background: url('../RealEstate/inc/images/banner.webp');
+    max-height: 800px;
+    height: 800px;
+    background-position:cover ;
+    background-position:center center ;
+    background-repeat:no-repeat ;
+}
+/* .background-banner-home{} */
+
+.form-banner {
+    width: 50vw;
+    padding: 50px;
+    z-index: 1;
+    padding: 50px 20px;
+    background-color: #dfdfdf;
+    border-radius: 20px;
+    /* filter: blur(8px); */
+}
+
+.button-banner-form-search-btn{
+    padding:0px 40px ;
+    background-color: #b9933f;
+    color: #fff;
+    border: 2px solid #b9933f;
+}
+.button-banner-form-search-btn:hover{
+    background-color: transparent;
+    color: #b9933f;
+    background-color: #fff  ;
+    border: 2px solid #b9933f;
+    transition: 0.6s ease-in-out ;
+}
+
+.form-banner-heading{
+    color: #b9933f;
+    font-weight: 700;
+    /* font-family: 'Nakheel-bold'; */
+    font-family: 'Poppins Medium';
+    font-size: 20   px;
+    line-height: 28px;
+    padding: 20px 0;
+}
+.form-banner-inner {
+    color: #333;
+    font-weight: 400;
+}
+.form-banner .form-row select:focus, .form-banner .form-row select:active {
+    border: 2px solid #b9933f;
+}
+.banner-drop-down-option select{
+    font-family: 'Poppins Medium';
+    font-weight: 400;
+    /* padding: 10px 0; */
+}
+
+/* Agent img sec banner */
+.agent-img-banner-sec{
+    width: 50vw;
+    padding: 50px 20px;
+    margin-left: 30px;
+}
+.agent-img{
+    /* background-color: red; */
+    border: #b9933f 1px solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 2;
+    transform: scale(1);
+    transition: ease-in-out 0.5s;
+    margin-left:-20px ;
+}
+.agent-img:hover{
+    z-index: 5;
+    background-color: yellow;
+    transform: scale(1.1);
+    margin-left:0;
+}
+.agent-number {
+    justify-self: center;
+    align-self: center;
+    margin: 0 20px;
+    font-family: 'Poppins Light';
+    font-weight: 400;
+    font-size: 18px;
+}
+.listing-link-banner {
+    color: #b9933f;
+}
