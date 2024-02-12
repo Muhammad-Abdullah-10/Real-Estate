@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container-fluid px-5 py-1">
+<div class="container-fluid px-5 ">
     <div class="row">
         <div class="col-xl-6 col-md-6 col-sm-12 banner-content d-flex flex-column justify-content-start align-items-start p-5 home-banner-right">
             <div class="contain-h1">
@@ -42,13 +42,16 @@
             <div class="agent-img-banner-sec">
                 <div class="row">
                         <?php echo get_field('agent_name'); ?>
-                        <?php echo  get_field('agent_image'); ?>
-                        <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
+                        <?php $agent_image =  get_field('agent_image');
+                            // get_query_var('agent');
+                            echo print_r( get_field('agent_image'));
+                        ?>
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
                         <p class="agent-number">50+ Agents <a href="#" class="listing-link-banner">See All Listing</a></p>
+                        
                 </div>
             </div>
         </div>

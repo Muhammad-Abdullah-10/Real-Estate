@@ -40,6 +40,9 @@ function add_custom_post_types()
         ),
         'menu_icon' => 'dashicons-building'
     ));
+    register_taxonomy( 'genre', 'agent', array(
+        'rewrite'      => array( 'slug' => 'books/genre' )
+    ) );
 }
 
 add_action('init', 'add_custom_post_types');
