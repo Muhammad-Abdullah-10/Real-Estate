@@ -40,9 +40,55 @@ function add_custom_post_types()
         ),
         'menu_icon' => 'dashicons-building'
     ));
-    register_taxonomy( 'genre', 'agent', array(
-        'rewrite'      => array( 'slug' => 'books/genre' )
-    ) );
+
+        register_taxonomy( 'Type', 'properties', array(
+            'rewrite'      => array( 'slug' => 'type' ),
+            'label' => __( 'Type', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'Status', 'properties', array(
+            'rewrite'      => array( 'slug' => 'status' ),
+            'label' => __( 'Status', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'Features', 'properties', array(
+            'rewrite'      => array( 'slug' => 'features' ),
+            'label' => __( 'Features', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'Labels', 'properties', array(
+            'rewrite'      => array( 'slug' => 'labels' ),
+            'label' => __( 'Labels', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'Landmark', 'properties', array(
+            'rewrite'      => array( 'slug' => 'landmark' ),
+            'label' => __( 'Landmark', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'City', 'properties', array(
+            'rewrite'      => array( 'slug' => 'city' ),
+            'label' => __( 'City', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'State', 'properties', array(
+            'rewrite'      => array( 'slug' => 'state' ),
+            'label' => __( 'State', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
+        register_taxonomy( 'Reviews', 'properties', array(
+            'rewrite'      => array( 'slug' => 'reviews' ),
+            'label' => __( 'Reviews', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+        ) );
 }
 
 add_action('init', 'add_custom_post_types');
