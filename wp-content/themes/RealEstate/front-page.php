@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div class="container-fluid px-5 ">
+<div class="container-fluid px-xl-5 ">
     <div class="row">
-        <div class="col-xl-6 col-md-6 col-sm-12 banner-content d-flex flex-column justify-content-start align-items-start p-5 home-banner-right">
+        <div class="col-xl-6 col-md-6 col-sm-12 banner-content d-flex flex-column justify-content-start align-items-start p-xl-5 home-banner-right">
             <div class="contain-h1">
                 <h1 class="banner-main-heading">Primo Real <span>Estate
                     </span>
