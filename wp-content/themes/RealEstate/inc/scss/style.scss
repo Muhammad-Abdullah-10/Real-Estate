@@ -1,3 +1,22 @@
 body{
     background-color:#fff;
 }
+
+$tab-dev: 768px;
+@media screen and (min-width: $tab-dev) {
+    .ham-btn{
+        display: none;
+    }
+}
+@media screen and (max-width: $tab-dev) {
+    .desktop-menu{
+        display: hidden;
+    }
+    .mobile-nav-bar-active{
+        height:80vh;
+        // background-color: #000;
+    }
+    .mobile-menu-visibility{
+        display: none;
+    }
+    }  
