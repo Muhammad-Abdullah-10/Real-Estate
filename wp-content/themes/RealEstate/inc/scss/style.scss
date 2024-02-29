@@ -19,4 +19,16 @@ $tab-dev: 768px;
     .mobile-menu-visibility{
         display: none;
     }
+    .mobile-nav-bar {
+        #main-header-menu{
+            width: 80vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            li{
+                justify-self:center;
+                align-self: center;
+            }
+        }
+    }
     }  
