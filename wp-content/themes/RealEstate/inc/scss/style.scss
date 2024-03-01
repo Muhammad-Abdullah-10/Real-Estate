@@ -1,5 +1,10 @@
+@import 'fonts';
+@import 'var';
+@import 'header';
+
 body{
     background-color:#fff;
+    font-family: $poppins-font-family , $san-serif-font;
 }
 
 $tab-dev: 768px;
@@ -7,6 +12,10 @@ $tab-dev: 768px;
     .ham-btn{
         display: none;
     }
+    .mobile-nav-bar {
+        display: none;
+    }
+    
 }
 @media screen and (max-width: $tab-dev) {
     .desktop-menu{

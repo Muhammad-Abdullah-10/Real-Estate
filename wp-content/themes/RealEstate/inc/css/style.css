@@ -1,9 +1,66 @@
+@font-face {
+  font-family: "Nakheel-bold";
+  src: url(../RealEstate/inc/fonts/Nakheel-TextBold.woff);
+}
+@font-face {
+  font-family: "Francy";
+  src: url(../RealEstate/inc/fonts/Francy.woff);
+}
+@font-face {
+  font-family: "Poppins Medium";
+  src: url(../RealEstate/inc/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppins Light";
+  src: url(../RealEstate/inc/fonts/Poppins-Light.ttf);
+}
+.navbar-brand {
+  width: 20vw;
+}
+
+#main-header-menu {
+  min-width: 60vw;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  list-style: none;
+  justify-content: space-around;
+}
+#main-header-menu ul {
+  list-style-type: none;
+}
+#main-header-menu ul li a {
+  font-family: "Poppins", "san-serif";
+  color: #e5892a;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 24;
+}
+
+ul#menu-main-menu .button-listing {
+  padding: 10px 35px;
+  background: #b9933f;
+  border: solid 1px #b9933f;
+  font-family: "Poppins";
+}
+
+.button-listing:hover {
+  background-color: transparent;
+  border: 1px solid #b9933f;
+  color: #333;
+}
+
 body {
   background-color: #fff;
+  font-family: "Poppins", "san-serif";
 }
 
 @media screen and (min-width: 768px) {
   .ham-btn {
+    display: none;
+  }
+  .mobile-nav-bar {
     display: none;
   }
 }

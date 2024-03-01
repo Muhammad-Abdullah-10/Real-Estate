@@ -68,39 +68,6 @@ table {
 h1,h2,h3,h4,h5,h6{
     font-family: 'Nakheel-bold';
 }
-.navbar-brand{
-    width: 20vw;
-}
-#main-header-menu{
-    min-width: 60vw;
-    display: flex;
-    flex-direction: row;    
-    list-style-type: none;
-    list-style: none ;
-    justify-content: space-around;
-}
-ul#menu-main-menu{
-    list-style-type: none ;
-}
-ul#menu-main-menu li a{
-    font-family:'Poppins Light' ;
-    color:#e5892a ;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 1;
-}
-.button-listing{
-    padding:10px 35px;
-    background: #b9933f;
-    border:solid 1px #b9933f;
-    font-family: 'Poppins';
-}
-.button-listing:hover{
-    background-color: transparent;
-    border: 1px solid #b9933f;
-    color: #333;
-}
 
 .contain-h1{
     max-width: 350px;
