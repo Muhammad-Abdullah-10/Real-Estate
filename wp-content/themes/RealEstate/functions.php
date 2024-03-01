@@ -50,6 +50,12 @@ function register_sitebar_and_menu()
         'FooterMenuThree' => 'Footer Menu Three',
         'FooterMenuFour' => 'Footer Menu Four',
     ));
+
+    // Agents thumbnail
+    add_post_type_support( 'agent', 'thumbnail' );
+
+    // Agents thumbnail
+    add_post_type_support( 'properties', 'thumbnail' );
 }
 add_action('after_setup_theme', 'register_sitebar_and_menu');
 
