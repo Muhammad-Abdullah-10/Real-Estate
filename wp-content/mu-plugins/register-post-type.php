@@ -30,7 +30,7 @@ function add_custom_post_types()
         'show_ui' => true,
         'show_in_menu' => true,
         'show_in_admin_bar' => true,
-        'show_in_rest' => false,
+        'show_in_rest' => true,
         'custom-fields' => true,
         'add_new'=> 'A',
         'add_new_item'=>'AA',
@@ -47,48 +47,64 @@ function add_custom_post_types()
     ));
 
         register_taxonomy( 'Type', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'type' ),
             'label' => __( 'Type', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'Status', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'status' ),
             'label' => __( 'Status', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'Features', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'features' ),
             'label' => __( 'Features', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'Labels', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'labels' ),
             'label' => __( 'Labels', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'Landmark', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'landmark' ),
             'label' => __( 'Landmark', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'City', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'city' ),
             'label' => __( 'City', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'State', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'state' ),
             'label' => __( 'State', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
         ) );
         register_taxonomy( 'Reviews', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
             'rewrite'      => array( 'slug' => 'reviews' ),
             'label' => __( 'Reviews', 'text_domain' ),
             'public' => true,
