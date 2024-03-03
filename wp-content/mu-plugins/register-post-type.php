@@ -70,6 +70,15 @@ function add_custom_post_types()
             'public' => true,
             'hierarchical' => true,
         ) );
+        register_taxonomy( 'Feature-Aminities', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
+            'rewrite'      => array( 'slug' => 'Feature-Aminities' ),
+            'label' => __( 'Feature & Aminities', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+            'description' => __( 'This taxonomy is for specifying features and amenities of properties.', 'text_domain' ),
+        ) );
         register_taxonomy( 'Labels', 'properties', array(
             'has_archive'  => true,
             'show_in_rest' => true,
@@ -78,14 +87,7 @@ function add_custom_post_types()
             'public' => true,
             'hierarchical' => true,
         ) );
-        register_taxonomy( 'Landmark', 'properties', array(
-            'has_archive'  => true,
-            'show_in_rest' => true,
-            'rewrite'      => array( 'slug' => 'landmark' ),
-            'label' => __( 'Landmark', 'text_domain' ),
-            'public' => true,
-            'hierarchical' => true,
-        ) );
+       
         register_taxonomy( 'City', 'properties', array(
             'has_archive'  => true,
             'show_in_rest' => true,

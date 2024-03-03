@@ -7,7 +7,6 @@
                     </span>
                 </h1>
             </div>
-
             <h3 class="banner-sub-heading">
                 Find the <span class="golden-color"> perfect place to</span>
                 live <span class="golden-color">with your</span> family
@@ -43,7 +42,7 @@
                 <div class="row">
                         <?php echo get_field('agent_name'); ?>
                         <?php $agent_image =  get_field('agent_image');
-                            // get_query_var('agent');
+                         // get_query_var('agent');
                             echo print_r( get_field('agent_image'));
                         ?>
                         <img src="<?php echo get_theme_file_uri(); ?>/inc/images/agent1.webp" alt="" class="agent-img">
