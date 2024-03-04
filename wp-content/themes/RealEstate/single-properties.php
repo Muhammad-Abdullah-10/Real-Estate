@@ -7,6 +7,7 @@ $query = new WP_Query(array(
     'post_type' => 'properties'
 ));
 
+
 while ($query ->have_posts()) {
     $query-> the_post();
 
@@ -14,38 +15,54 @@ while ($query ->have_posts()) {
 	// print_r( $taxonomy_objects);
     // the_content();
     $terms = get_the_terms( $post->ID , 'City' );
-    $propertyType =  get_the_terms($query->ID, 'Type');;
+    // $propertyType =  get_the_terms($query->ID, 'Type');;
     $propertyFeatures = get_the_terms($query->ID, 'Features');
     $propertyFeature_Aminities = get_the_terms(the_ID(), 'Feature-Aminities');
-    $featureimage = get_field('feature_area_image');
+    $featureimage = the_field('features_&_amenities_icon');
     // if (!empty($propertyType)) {
     //     echo $propertyType[0]->name;
     // }
     // echo $propertyFeature_Aminities . "this is";
     $featureAndAmenities = get_terms(['taxonomy' =>'Feature-Aminities','hide_empty' => true]); 
+    
     // $mycat = get_category(['taxonomy' =>'Type']); 
     // print_r($myterms);
     // print_r($mycat);
      ?>
+     <div class="container py-5 ">
+        <div class="row">
+            <?php $propertyType = get_terms(['taxonomy' =>'Type','hide_empty' => true]);  ?>
+             
+            <?php foreach($propertyType as $propDetails){
+                ?>  <h3>Property Type : <?php echo  $propDetails->name; ?>
+            <?php } ?>
+            <!-- <?php print_r($propertyType); ?> -->
+        </div>
+     </div>
     <div class="container">
         <div class="row">
             
             <?php
         if (!empty($featureAndAmenities)) {
-            // var_dump($propertyFeatures);
+        
             foreach ($featureAndAmenities as $featureAndAmenitiesData){
         ?>
             <div class="col-lg-4 col-md-6 col-sm-12">
             <?php echo $featureAndAmenitiesData->name; ?><br>
             <?php echo term_description($featureAndAmenitiesData-> term_id); ?><br>
-            <!-- <img style="max-width: 500px;" src="<?php echo esc_url($featureimage['url']); ?>" alt="<?php echo esc_attr($featureimage['alt']); ?>" /> -->
-            <?php echo print_r($featureimage); ?>
+            
+            <?php
+$featureimage = get_field('features_&_amenities_icon'); // Retrieve the field value
+
+?>
+
+            
             </div>      
         <?php
         }
     }
         ?>
-           
+           <!-- <img style="max-width: 500px;" src="<?php echo esc_url($featureimage['url']); ?>" alt="<?php echo esc_attr($featureimage['alt']); ?>" /> -->
         </div>
     </div>
         
