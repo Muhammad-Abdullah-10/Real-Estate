@@ -56,11 +56,11 @@ while ($query->have_posts()) {
                         <h4><?php echo $featureAndAmenitiesData->name; ?><br></h4>
                         <p><?php echo term_description($featureAndAmenitiesData->term_id); ?><br></p>        
                         <p><?php
-                         $testing =$featureAndAmenitiesData->term_id; echo $testing;
-                         $get_term_ID_S = get_field("features_&_amenities_icon", $testing);
+                        // Getting ACF Image URL Features and Aminities
+                        $img_term_id = $featureAndAmenitiesData->term_id; 
+                        $image_url = get_field('features_&_amenities_icon', 'term_' . $img_term_id);
                         ?><br></p>        
-                        <!-- <img style="width: 200px;" src="<?php echo $get_term_ID_S; ?>" alt="<?php  ?>" /> -->
-                        <img style="width: 200px;" src="<?php echo the_field("features_&_amenities_icon", $testing); ?>" alt="<?php  ?>" />
+                        <img style="width: 100px;height:100px;object-fit:cover;" src="<?php echo $image_url; ?>" alt="<?php  ?>" />
                     </div>
             <?php
                 }
@@ -82,6 +82,11 @@ while ($query->have_posts()) {
             ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <?php echo $featuresData->name; ?><br>
+                        <?php
+                        $img_term_id = $featuresData->term_id; 
+                        $image_url = get_field('feature_area_image', 'term_' . $img_term_id);
+                        ?><br></p>        
+                        <img style="width: 100px;height:100px;object-fit:cover;" src="<?php echo $image_url; ?>" alt="<?php  ?>" />
                         <img style="width: 200px;" src="<?php the_field("feature_area_image", 22) ?>" alt="<?php  ?>" />
                     </div>
             <?php
