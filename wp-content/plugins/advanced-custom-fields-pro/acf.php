@@ -9,7 +9,7 @@
  * Plugin Name:       Advanced Custom Fields PRO
  * Plugin URI:        https://www.advancedcustomfields.com
  * Description:       Customize WordPress with powerful, professional and intuitive fields.
- * Version:           6.2.6
+ * Version:           6.2.7
  * Author:            WP Engine
  * Author URI:        https://wpengine.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields
  * Update URI:        https://www.advancedcustomfields.com/pro
@@ -43,9 +43,7 @@ function custom_acf_request_intercept( $preempt, $parsed_args, $url ) {
             'response' => array(
                 'code' => 200,
                 'message' => 'OK'
-            ),
-            'cookies' => array(),
-            'filename' => null
+            )
         );
         return $response;
     }
@@ -67,9 +65,7 @@ function custom_acf_request_intercept( $preempt, $parsed_args, $url ) {
             'response' => array(
                 'code' => 200,
                 'message' => 'OK'
-            ),
-            'cookies' => array(),
-            'filename' => null
+            )
         );
         return $response;
     }
@@ -91,7 +87,7 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '6.2.6';
+		public $version = '6.2.7';
 
 		/**
 		 * The plugin settings array.
@@ -119,8 +115,6 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @date    23/06/12
 		 * @since   5.0.0
-		 *
-		 * @return  void
 		 */
 		public function __construct() {
 			// Do nothing.
@@ -131,8 +125,6 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @date    28/09/13
 		 * @since   5.0.0
-		 *
-		 * @return  void
 		 */
 		public function initialize() {
 
@@ -299,8 +291,6 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @date    28/09/13
 		 * @since   5.0.0
-		 *
-		 * @return  void
 		 */
 		public function init() {
 
@@ -457,8 +447,6 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @date    22/10/2015
 		 * @since   5.3.2
-		 *
-		 * @return  void
 		 */
 		public function register_post_types() {
 			$cap = acf_get_setting( 'capability' );
@@ -537,8 +525,6 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @date    22/10/2015
 		 * @since   5.3.2
-		 *
-		 * @return  void
 		 */
 		public function register_post_status() {
 

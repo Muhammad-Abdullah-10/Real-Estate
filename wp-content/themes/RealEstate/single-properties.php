@@ -6,26 +6,21 @@ global $post;
 $query = new WP_Query(array(
     'post_type' => 'properties'
 ));
-
-
 while ($query->have_posts()) {
     $query->the_post();
-
-    // $taxonomy_objects = get_object_taxonomies( 'properties', 'objects' );
-    // print_r( $taxonomy_objects);
-    // the_content();
     $terms = get_the_terms($post->ID, 'City');
-    
-    // if (!empty($propertyType)) {
-    //     echo $propertyType[0]->name;
-    // }
-    // echo $propertyFeature_Aminities . "this is";
-    
 
-    // $mycat = get_category(['taxonomy' =>'Type']); 
-    // print_r($myterms);
-    // print_r($mycat);
 ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="single-property-banner">
+            <img style="width:100vw; height:500px" src="<?php echo the_field("property_feature_image");  ?>" alt="" class="container-image-property-bg">
+            <h1><?php the_title(); ?></h1>
+            </img>
+            </div>
+            
+        </div>
+    </div>
     <!-- Type-->
     <div class="container py-5 ">
         <div class="row">

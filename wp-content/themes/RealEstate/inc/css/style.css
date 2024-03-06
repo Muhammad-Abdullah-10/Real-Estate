@@ -85,3 +85,10 @@ body {
     align-self: center;
   }
 }
+.container-image-property-bg {
+  width: 100vw;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position:center center ;
+}
