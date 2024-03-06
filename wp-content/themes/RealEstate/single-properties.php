@@ -14,21 +14,60 @@ while ($query->have_posts()) {
     <div class="container-fluid">
         <div class="row">
             <div class="single-property-banner">
-            <img style="width:100vw; height:500px" src="<?php echo the_field("property_feature_image");  ?>" alt="" class="container-image-property-bg">
-            <h1><?php the_title(); ?></h1>
-            </img>
+                <img style="width:100vw; height:500px" src="<?php echo the_field("property_feature_image");  ?>" alt="" class="container-image-property-bg">
+                <!-- <h1><?php the_title(); ?></h1> -->
+                </img>
             </div>
-            
+
         </div>
     </div>
     <!-- Type-->
+    <div class="container-fluid single-prop-details p-3 col-8">
+        <div class="container d-flex justify-items-between col-12">
+            <div class="col-12 row">
+                <div class="col-6">
+                    <h1 class="single-prop-heading">
+                        <?php the_title(); ?>
+                    </h1>
+                    <div class="dev-community">
+                        By
+                        <span>
+                            <?php
+                                $developer = get_terms(['taxonomy' => 'developer', 'hide_empty' => true]);
+                                if (!empty($developer) && !is_wp_error($developer))
+                                    foreach ($developer as $developerDetails) {
+                                        echo  $developerDetails->name;
+                                    }
+                                ?>
+                        </span>
+                        <span class="divider"></span>
+                        <span>
+                            <?php
+                                $communities = get_terms(['taxonomy' => 'communities', 'hide_empty' => true]);
+                                if (!empty($communities) && !is_wp_error($communities))
+                                    foreach ($communities as $communitiesDetails) {
+                                        echo  $communitiesDetails->name;
+                                    }
+                                ?>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <h5 class="single-prop-pricetext">Starting From</h5>
+                    <h3 class="single-prop-priceval">AED <?php echo  the_field("property_price") ; ?></h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
     <div class="container py-5 ">
         <div class="row">
             <?php $propertyType = get_terms(['taxonomy' => 'Type', 'hide_empty' => true]);
             if (!empty($propertyType) && !is_wp_error($propertyType))
                 foreach ($propertyType as $propDetails) {
             ?>
-             <h3>Property Type : <?php echo  $propDetails->name; ?>
+                <h3>Property Type : <?php echo  $propDetails->name; ?>
                 <?php } ?>
                 <!-- <?php print_r($propertyType); ?> -->
         </div>
@@ -37,7 +76,7 @@ while ($query->have_posts()) {
     <!-- Features & Amenities -->
     <div class="container">
         <div class="row">
-        <h2 class="col-lg-12">Features & Amenities</h2>
+            <h2 class="col-lg-12">Features & Amenities</h2>
             <?php
             // $featureimage = the_field('features_&_amenities_icon' , the_ID());
             $featureAndAmenities = get_terms(['taxonomy' => 'Feature-Aminities', 'hide_empty' => true]);
@@ -46,27 +85,27 @@ while ($query->have_posts()) {
             ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <h4><?php echo $featureAndAmenitiesData->name; ?><br></h4>
-                        <p><?php echo term_description($featureAndAmenitiesData->term_id); ?><br></p>        
+                        <p><?php echo term_description($featureAndAmenitiesData->term_id); ?><br></p>
                         <p><?php
-                        // Getting ACF Image URL Features and Aminities
-                        $img_term_id = $featureAndAmenitiesData->term_id; 
-                        $image_url = get_field('features_&_amenities_icon', 'term_' . $img_term_id);
-                        ?><br></p>        
+                            // Getting ACF Image URL Features and Aminities
+                            $img_term_id = $featureAndAmenitiesData->term_id;
+                            $image_url = get_field('features_&_amenities_icon', 'term_' . $img_term_id);
+                            ?><br></p>
                         <img style="width: 100px;height:100px;object-fit:cover;" src="<?php echo $image_url; ?>" alt="<?php  ?>" />
                     </div>
             <?php
                 }
             }
             ?>
-            
+
         </div>
     </div>
     <!-- Features & Amenities -->
-   <!-- Features -->
-   <div class="container">
+    <!-- Features -->
+    <div class="container">
         <div class="row">
             <h2 class="col-lg-12">Features</h2>
-        
+
             <?php
             $features = get_terms(['taxonomy' => 'Features', 'hide_empty' => true]);
             if (!empty($features)) {
@@ -75,9 +114,9 @@ while ($query->have_posts()) {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <?php echo $featuresData->name; ?><br>
                         <?php
-                        $img_term_id = $featuresData->term_id; 
+                        $img_term_id = $featuresData->term_id;
                         $image_url = get_field('feature_area_image', 'term_' . $img_term_id);
-                        ?><br></p>        
+                        ?><br></p>
                         <img style="width: 100px;height:100px;object-fit:cover;" src="<?php echo $image_url; ?>" alt="<?php  ?>" />
                         <img style="width: 200px;" src="<?php the_field("feature_area_image", 22) ?>" alt="<?php  ?>" />
                     </div>
@@ -94,34 +133,34 @@ while ($query->have_posts()) {
     <div class="container">
         <div class="row">
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('unit_type'); ?></h3>            
+                <h3><?php echo get_field('unit_type'); ?></h3>
             </div>
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('unit_size'); ?></h3>
+                <h3><?php echo get_field('unit_size'); ?></h3>
             </div>
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('down_payment'); ?></h3>
+                <h3><?php echo get_field('down_payment'); ?></h3>
             </div>
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('payment_plan'); ?></h3>
+                <h3><?php echo get_field('payment_plan'); ?></h3>
             </div>
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('handover'); ?></h3>
+                <h3><?php echo get_field('handover'); ?></h3>
             </div>
             <div class="col-lg-4 my-2">
-            <h3><?php echo get_field('property_price'); ?></h3>
+                <h3><?php echo get_field('property_price'); ?></h3>
             </div>
-            <div class="col-lg-4 my-2">    
-            <h3><?php echo get_field('features_&_amenities_icon'); ?></h3>
+            <div class="col-lg-4 my-2">
+                <h3><?php echo get_field('features_&_amenities_icon'); ?></h3>
             </div>
         </div>
     </div>
-    
-    
-  
-   
-   
-    
+
+
+
+
+
+
     <!-- <h3><?php echo $arraay_tt = get_field('master_plan_image');
                 echo $arraay_tt; ?></h3> -->
     <!-- <?php

@@ -47,3 +47,37 @@ $tab-dev: 768px;
         width: 100vw;
         min-height: 500px;
     }
+    
+    .single-prop-heading{
+        font-family:  $poppins-font-family , $san-serif-font;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .dev-community{
+        max-width: 500px;
+        span{
+            font-family: $poppins-font-family;
+            font-size: 18px;
+            line-height : 24px;
+            color: red;
+        }
+        .divider{
+            position: relative;
+            height: 30px;
+            width: 10px;
+            color: #000;
+        }
+    }
+    .single-prop-pricetext{
+        padding:  0 10px;
+        color:#B9933F;
+        font-size: 14px;
+        font-family: $poppins-font-family;
+    }
+    .single-prop-priceval{
+        color:#000;
+        font-size: 18px;
+        font-family: $poppins-font-family;
+        padding: 10px;
+    }
