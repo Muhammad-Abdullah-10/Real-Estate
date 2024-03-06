@@ -69,14 +69,43 @@ function add_custom_post_types()
             'label' => __( 'Features', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
+            // 'query_var' => true,
+        ) );
+        register_taxonomy( 'developer', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
+            'rewrite'      => array( 'slug' => 'developer' ),
+            'label' => __( 'Developer', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+            // 'query_var' => true,
+        ) );
+        register_taxonomy( 'communities', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
+            'rewrite'      => array( 'slug' => 'community' ),
+            'label' => __( 'Community', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+            // 'query_var' => true,
+        ) );
+        register_taxonomy( 'location', 'properties', array(
+            'has_archive'  => true,
+            'show_in_rest' => true,
+            'rewrite'      => array( 'slug' => 'locations' ),
+            'label' => __( 'Location', 'text_domain' ),
+            'public' => true,
+            'hierarchical' => true,
+            // 'query_var' => true,
         ) );
         register_taxonomy( 'Feature-Aminities', 'properties', array(
             'has_archive'  => true,
             'show_in_rest' => true,
-            'rewrite'      => array( 'slug' => 'Feature-Aminities' ),
+            'rewrite'      => array( 'slug' => 'feature-aminities' ),
             'label' => __( 'Feature & Aminities', 'text_domain' ),
             'public' => true,
             'hierarchical' => true,
+            // 'query_var' => true,
             'description' => __( 'This taxonomy is for specifying features and amenities of properties.', 'text_domain' ),
         ) );
         register_taxonomy( 'Labels', 'properties', array(

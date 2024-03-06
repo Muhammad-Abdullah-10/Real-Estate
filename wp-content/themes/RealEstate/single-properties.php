@@ -15,9 +15,6 @@ while ($query->have_posts()) {
     // print_r( $taxonomy_objects);
     // the_content();
     $terms = get_the_terms($post->ID, 'City');
-
-
-    $propertyFeature_Aminities = get_the_terms(the_ID(), 'Feature-Aminities');
     
     // if (!empty($propertyType)) {
     //     echo $propertyType[0]->name;
@@ -49,7 +46,7 @@ while ($query->have_posts()) {
             <?php
             // $featureimage = the_field('features_&_amenities_icon' , the_ID());
             $featureAndAmenities = get_terms(['taxonomy' => 'Feature-Aminities', 'hide_empty' => true]);
-            if (!empty($featureAndAmenities)) {
+            if (!empty($featureAndAmenities) && !is_wp_error($featureAndAmenities)) {
                 foreach ($featureAndAmenities as $featureAndAmenitiesData) {
             ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
